@@ -41,7 +41,8 @@ gsap.ticker.lagSmoothing(0);
     }
 
 
-    MarqueeDuplicateAndTime(".client-logos-wrap", ".client-logos-wrap .logo-col", 4)
+    MarqueeDuplicateAndTime(".client-logos-wrap", ".client-logos-wrap .logo-col", 4) 
+    MarqueeDuplicateAndTime(".team-cards-wrap", ".team-cards-wrap .team-card-col", 4)
 
 
  
