@@ -817,6 +817,100 @@ line-height: 95%;
   margin-bottom:0;
 }
 
+.marquee-wrapper{
+  overflow: hidden;
+  background: url("../images/vivid-blurred-colorful-bg.png") center center / 100% 100% no-repeat;
+  padding: 1rem 0px;
+   
+}
+.marquee-wrap{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: 0s linear 0s infinite normal none running infinite-RTL;
+}
+.marquee-wrap p{
+  font-size: 4rem; 
+font-family: "Dharma-GE-Bold";
+line-height: normal;
+letter-spacing: -0.04rem;
+text-transform: uppercase;
+color: var(--theme-white);
+margin-bottom: 0;
+}
+.marquee-wrap p:after {
+  content: "";
+  position: relative;
+  width: 2.625rem;
+  height: 2.625rem;
+  background: url("../images/white-star-icon.svg") center center / cover no-repeat;
+  display: inline-block;
+}
+
+
+.footer-wrap{
+  background: url("../images/vivid-blurred-colorful-bg.png") center center / cover no-repeat;
+}
+
+
+.subscribe-form-wrapper{
+  border-radius: 1.875rem;
+
+  border: 2px solid rgb(255, 255, 255);
+  padding: 3.12rem 1.63rem;
+  background: conic-gradient(from 127deg at 50.42% 51.28%, rgb(192, 215, 243) 39.9062deg, rgb(182, 208, 247) 73.6793deg, rgb(238, 244, 225) 118.944deg, rgb(226, 193, 249) 155.625deg, rgb(191, 209, 249) 209.309deg, rgb(250, 252, 254) 252.649deg, rgb(186, 228, 226) 316.524deg, rgb(140, 107, 227) 358.059deg);
+}
+.subscribe-form-wrap{
+  border-radius: 0.5rem;
+  background-color: var(--theme-white);
+  padding: 0.38rem 0.5rem 0.38rem 1.31rem;
+  display: grid;
+  grid-template-columns: auto max-content;
+}
+
+.subscribe-form-wrap input{
+  border: 0px;
+  font-size: 1rem;
+  width: 100%;
+  color: var(--theme-black-primary);
+}
+
+.footer-wrap h2{
+  background: linear-gradient(rgb(255, 254, 249) 4.92%, rgba(255, 254, 249, 0) 77%) text;
+  -webkit-text-fill-color: transparent;
+  line-height: 100%;
+}
+.footer-content-row .row>*:first-child{
+  padding-right: 7.2rem;
+}
+
+.footer-copyrights-wrap a{
+color: var(--theme-white);
+}
+.footer-copyrights-wrap{
+  padding: 3.25rem 0;
+}
+.footer-copyrights-wrap p{
+  margin-bottom: 0;
+}
+.social-media-links {
+list-style: none;
+display: flex;
+gap: 1rem;
+align-items: center;
+padding-left: 0;
+}
+.social-media-links li{
+  margin-bottom: 0!important;
+}
+.social-media-links li a,
+.footer-copyrights-wrap *{
+  font-size: 1.125rem; 
+font-weight: 400;
+line-height:  166.667% ;
+letter-spacing: -0.01125rem;
+}
+
 /* Media Queries */
 
 
