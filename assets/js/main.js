@@ -16,6 +16,69 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 
+
+
+function SectionTopSpace() {
+
+    let headerH = document.querySelector("header").offsetHeight;
+
+    document.querySelector("main .hero-section").style.height = "auto";
+    document.querySelector("main .hero-section").style.paddingTop = (window.innerWidth > 992 ? (headerH - 18) : headerH) + "px";
+
+}
+SectionTopSpace();
+
+window.addEventListener("resize", () => {
+    SectionTopSpace();
+});
+
+
+const scrollHeader = (element) => {
+    document.addEventListener("scroll", () => {
+        let getElem = document.querySelector(element)
+        //  console.log(getElem)
+        if (window.scrollY > 30) {
+            getElem.classList.add("headerActive")
+        } else {
+            getElem.classList.remove("headerActive")
+        }
+
+    })
+}
+scrollHeader("header");
+
+
+let didScroll;
+let lastScrollT = 0;
+let delta = 5;
+let siteHeader = document.querySelector('header').offsetHeight;
+
+window.addEventListener('scroll', function(event) {
+didScroll = true;
+});
+
+setInterval(function() {
+if (didScroll) {
+    hasScroll();
+    didScroll = false;
+}
+}, 250);
+
+function hasScroll() {
+let scrollT = window.scrollY || document.documentElement.scrollTop;
+if (Math.abs(lastScrollT - scrollT) <= delta)
+    return;
+if (scrollT > lastScrollT && scrollT > siteHeader) {
+    document.querySelector("header").style.transform = "translateY(-100%)";
+} else {
+    if (scrollT + window.innerHeight < document.documentElement.scrollHeight) {
+        document.querySelector("header").style.transform = "translateY(0%)";
+    }
+}
+lastScrollT = scrollT;
+}
+
+
     const MarqueeDuplicateAndTime = (marqueeWrap, marqueeList, loopVal) => {
 
         let getCloneWrapper = document.querySelectorAll(marqueeWrap);

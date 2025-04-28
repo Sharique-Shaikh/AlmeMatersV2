@@ -409,6 +409,66 @@ section {
   transition: .3s linear;
 }
 
+.header-wrap{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index: 99999;
+  padding: 3.69rem 0 ; 
+  transition: 300ms ease-out;
+}
+.header-wrap.headerActive{
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+}
+.header-wrap a{
+  color: var(--theme-white);
+}
+
+.navigation-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation-wrap .site-logo a{
+  font-size: 3.5rem;
+  font-family: 'Dharma-GE-Bold';
+  line-height: 100%;
+  letter-spacing: -0.035rem;
+  text-transform: uppercase;
+}
+.main-menu-wrap ul{
+  list-style: none;
+  display: flex;
+  gap: 2.38rem;
+}
+.main-menu-wrap a{
+  font-size: 1.25rem; 
+font-weight: 400;
+line-height:  140%;
+letter-spacing: -0.0125rem;
+}
+
+.social-media-icon-links{
+  list-style: none;
+  display: flex;
+  gap: 2.56rem;
+}
+.social-media-icon-links img{
+  width: 1.9375rem; 
+aspect-ratio: 1/1;
+object-fit: contain;
+}
+.social-media-icon-links,
+.main-menu-wrap ul{
+  padding-left: 0;
+}
+body .social-media-icon-links li,
+body .main-menu-wrap ul li{
+margin-bottom: 0;
+}
+
 
 .single-img {
   width: 100%;
@@ -427,7 +487,15 @@ section {
 /* .home-hero-section h1{
   background: linear-gradient(rgb(255, 254, 249) 4.92%, rgba(255, 254, 249, 0) 77%) text;
   -webkit-text-fill-color: transparent;
-} */
+  } */
+  .home-hero-section .bg-center-right-elem{
+    position: absolute;
+    right: -12rem;
+    top: 19rem;
+    width: 22.1875rem;
+height: 23.5rem;
+object-fit: contain;
+  }
 
 .home-hero-section .pixel-head {
   font-size: 2.5rem;
@@ -680,6 +748,9 @@ section {
   filter: blur(10px);
 }
 
+.protocol-section{
+  background: var(--theme-black-primary) url("../images/blur-red-bg-elem.png") center 80% / contain no-repeat;
+}
 
 .revolution-wrap p {
   font-size: 1.875rem;
@@ -747,6 +818,24 @@ section {
 
 .fueled-wrapper .container-card {
   background: url("../images/vivid-blurred-colorful-wallpaper-background-v2.png") center / cover no-repeat;
+}
+
+.faqs-section{
+  background: url("../images/blur-red-bg-elem.png") -44rem -9rem / contain no-repeat,
+  url("../images/blur-red-bg-elem.png") 48rem 60% / contain no-repeat, var(--theme-black-primary);
+}
+
+.faqs-section .bg-top-left-elem{
+  position: absolute;
+  left: -11rem;
+  top: 30rem;
+  rotate: -22deg;
+}
+.faqs-section .bg-center-right-elem{
+  position: absolute;
+  right: -11rem;
+  top: 50%;
+  rotate: -22deg;
 }
 
 .faqs-wrap .accordion-button:not(.collapsed),
@@ -911,8 +1000,10 @@ line-height:  166.667% ;
 letter-spacing: -0.01125rem;
 }
 
-/* Media Queries */
 
+
+
+/* Media Queries */
 
 @media screen and (max-width:992px) {
 
