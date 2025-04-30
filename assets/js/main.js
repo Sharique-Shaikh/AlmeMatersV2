@@ -33,6 +33,12 @@ window.addEventListener("resize", () => {
 });
 
 
+document.querySelector(".mobile-menu").addEventListener("click", () => {
+    document.querySelector(".mobile-menu").classList.toggle("active");
+    document.querySelector(".navigation-wrap").classList.toggle("active");
+})
+
+
 const scrollHeader = (element) => {
     document.addEventListener("scroll", () => {
         let getElem = document.querySelector(element)
@@ -96,18 +102,20 @@ lastScrollT = scrollT;
                 let getListOfSlide = getCloneWrap.querySelectorAll(marqueeList).length,
                     getFirstSlideW = getCloneWrap.offsetWidth;
  
-                getCloneWrap.style.animationDuration = getFirstSlideW / (getListOfSlide + 100) + "s";
+                getCloneWrap.style.animationDuration = getFirstSlideW / (getListOfSlide + 50) + "s";
 
 
             })
         })
     }
 
-
+setTimeout(() => {
+    
     MarqueeDuplicateAndTime(".client-logos-wrap", ".client-logos-wrap .logo-col", 4) 
     MarqueeDuplicateAndTime(".team-cards-wrap", ".team-cards-wrap .team-card-col", 4)
     MarqueeDuplicateAndTime(".marquee-wrap", ".marquee-wrap p", 4)
-
+    
+}, 1500);
 
  
  // Parallax Effect start
@@ -143,6 +151,29 @@ lastScrollT = scrollT;
 });
 
 // Parallax Effect end
+
+
+
+const box = document.querySelector('.tilt-elem');
+
+box.addEventListener('mousemove', (e) => {
+  const rect = box.getBoundingClientRect();
+  const x = e.clientX - rect.left; // mouse X relative to element
+  const y = e.clientY - rect.top;  // mouse Y relative to element
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  // Calculate rotation (max tilt 15 degrees)
+  const rotateX = ((y - centerY) / centerY) * -35;
+  const rotateY = ((x - centerX) / centerX) * 35;
+
+  box.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+box.addEventListener('mouseleave', () => {
+  box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
 
 
 }); /* DOMContent END */ 

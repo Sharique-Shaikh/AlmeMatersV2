@@ -7,3 +7,7 @@
 
 # 28-04-2025 - Ready Home page
 # --- Mobile Responsive Header menu pending. 
+
+# 30-04-2025 - Ready Home page Mobile Responsive.
+# --- Mobile Header Menu.
+# --- Tilt Effect on the Coin.
