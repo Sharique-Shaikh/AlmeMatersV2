@@ -11,3 +11,5 @@
 # 30-04-2025 - Ready Home page Mobile Responsive.
 # --- Mobile Header Menu.
 # --- Tilt Effect on the Coin.
+
+# 05-05-2025 - Update Team Section Content with New UI.
