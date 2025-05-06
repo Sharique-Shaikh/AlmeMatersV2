@@ -176,4 +176,30 @@ box.addEventListener('mouseleave', () => {
 });
 
 
+function addPopUpAttr(selector, popupSelect){
+	
+    document.querySelectorAll(selector).forEach((item)=>{
+        item.setAttribute("data-bs-toggle","modal");
+        item.setAttribute("data-bs-target",popupSelect);
+    })
+   }
+
+   if(document.querySelectorAll(".team-card-col")[0]){
+    addPopUpAttr(".team-card-col ", "#teamModal");
+
+    document.querySelectorAll(".team-card-col").forEach((item)=>{
+        item.addEventListener("click",()=>{
+            let getTeamName = item.querySelector(".team-info h3").innerHTML,
+                getTeamPosition = item.querySelector(".team-info ").getAttribute("data-designation"),
+                getTeamDesc = item.querySelector(".team-info ").getAttribute("data-about"),
+                getTeamImage = item.querySelector(".col-img img").getAttribute("src"); 
+
+                document.querySelector(".team-popup-content .col-content h2").innerHTML = getTeamName;
+                document.querySelector(".team-popup-content .col-content h3").innerHTML = getTeamPosition;
+                document.querySelector(".team-popup-content .col-content p").innerHTML = getTeamDesc;
+                document.querySelector(".team-popup-content .col-img img").setAttribute("src",getTeamImage);
+        })
+    })
+    }
+
 }); /* DOMContent END */ 

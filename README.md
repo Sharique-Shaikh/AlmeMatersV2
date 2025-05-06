@@ -13,3 +13,6 @@
 # --- Tilt Effect on the Coin.
 
 # 05-05-2025 - Update Team Section Content with New UI.
+
+# 06-05-2025 - Add popup functionality on the Team card to show the additional content.
+# --- Fix Popup Issue.
