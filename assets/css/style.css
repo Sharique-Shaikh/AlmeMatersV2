@@ -895,6 +895,11 @@ font-size: 2rem;
 margin-bottom: 1rem;
 }
 
+#teamModal .modal-dialog{
+  width: calc(100vw / 1.8);
+    max-width: none;
+}
+
 
 .fueled-wrapper .container-card {
   background: url("../images/vivid-blurred-colorful-wallpaper-background-v2.png") center / cover no-repeat;
@@ -1325,6 +1330,10 @@ height: 1.578125rem;
 
 .team-popup-content .col-img img {
   width: 50%;
+}
+#teamModal .modal-dialog{
+  width: calc(100vw - 3rem);
+        margin: auto;
 }
 
 }/* 992px Media Queries */
