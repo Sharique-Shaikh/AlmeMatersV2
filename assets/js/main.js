@@ -185,7 +185,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.querySelectorAll(".team-cards-wrap ")[0]) {
-        addPopUpAttr(".team-card-col ", "#teamModal");
+        // addPopUpAttr(".team-card-col ", "#teamModal");
+
+        document.querySelectorAll(".team-card-col ").forEach((item) => {
+            if(!item.classList.contains("no-modal")) { 
+                item.setAttribute("data-bs-toggle", "modal");
+                item.setAttribute("data-bs-target", "#teamModal");
+            }
+        })
 
         document.querySelector(".team-cards-wrap ").addEventListener("click", (event) => {
             const item = event.target.closest(".team-card-col");
