@@ -233,12 +233,12 @@ h4,
   letter-spacing: -0.035rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 3rem;
   letter-spacing: -0.03rem;
 }
 
-h6 {
+h6, .h6 {
   font-size: 2.5rem;
   line-height: 95%;
   letter-spacing: -0.03rem;
@@ -823,7 +823,7 @@ object-fit: contain;
   border-radius: 1.125rem;
   /* border: 1px solid rgba(255, 255, 255, 0.10); */
   background-color: #202020; 
-
+  cursor: pointer; 
 }
 .team-card-col .col-img{
   width: 100%;
@@ -863,6 +863,38 @@ object-fit: contain;
   letter-spacing: -0.01rem;
   margin-bottom: 0;
 }
+
+.team-popup-content .col-img img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+#teamModal .modal-content{
+  color: var(--theme-white);
+background-color: #252525a2;
+border: 1px solid rgba(58, 58, 58, 0.801);
+backdrop-filter: blur(10px);
+}
+.team-popup-content{
+  padding: 2rem;
+}
+.team-popup-content .btn-close{
+  position: absolute;
+  right:1rem;
+  top:1rem;
+  filter: invert(1);
+  opacity: 1;
+}
+.team-popup-content p{
+  margin-bottom: 0;
+}
+.team-popup-content h3{
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
 
 .fueled-wrapper .container-card {
   background: url("../images/vivid-blurred-colorful-wallpaper-background-v2.png") center / cover no-repeat;
@@ -1068,7 +1100,8 @@ letter-spacing: -0.01125rem;
 
 
 
-/* Media Queries */
+
+/* ------------  Media Queries  ------------ */
 
 @media screen and (max-width:992px) {
 
@@ -1105,12 +1138,12 @@ letter-spacing: -0.01125rem;
     letter-spacing: -0.035rem;
   }
   
-  h5 {
+  h5, .h5 {
     font-size: 2.5rem;
     letter-spacing: -0.03rem;
   }
   
-  h6 {
+  h6, .h6 {
     font-size: 2rem;
     line-height: 95%;
     letter-spacing: -0.03rem;
@@ -1288,6 +1321,10 @@ height: 1.578125rem;
 }
 .subscribe-form-wrapper{
   padding: 2.12rem 1.63rem;
+}
+
+.team-popup-content .col-img img {
+  width: 50%;
 }
 
 }/* 992px Media Queries */
