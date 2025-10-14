@@ -16,3 +16,5 @@
 
 # 06-05-2025 - Add popup functionality on the Team card to show the additional content.
 # --- Fix Popup Issue.
+
+# 14-10-2025 - Update the CTAs and content.
