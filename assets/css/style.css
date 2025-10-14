@@ -702,6 +702,40 @@ object-fit: contain;
   transition: 400ms ease-out;
 }
 
+span.comin-soon-tag {
+    display: block;
+    font-size: 1rem;
+    line-height: 100%;
+    font-family: 'Dharma-GE-Bold';
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    letter-spacing: 0.05rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+.hover-scale-cards-wrap .scale-card-col:not(:has(.comin-soon-tag)):before {
+    content:"";
+    background: url("../images/arrow-right-white.svg") center center / contain no-repeat;
+    width: 2rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    display: block;
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+    rotate: -45deg;
+    filter: invert(1) blur(10px); 
+    transition: 400ms ease-out;
+    z-index: 11;
+}
+.hover-scale-cards-wrap .scale-card-col:not(:has(.comin-soon-tag)):hover:before{
+     filter: invert(1) blur(0px);
+}
+
 
 .container-card {
   padding:  4.62rem;
